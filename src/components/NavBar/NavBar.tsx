@@ -8,11 +8,11 @@ export default function NavBar() {
 
   function NavMenu() {
     return (
-      <button className="bg-secondary-bg" onClick={() => setOpen(!open)}>
+      <button className="" onClick={() => setOpen(!open)}>
         <MenuIcon
           className="stroke-white object-contain"
-          height="24px"
-          width="24px"
+          height="36px"
+          width="36px"
         />
       </button>
     );
@@ -31,7 +31,7 @@ export default function NavBar() {
     <div className="sticky top-0 w-full z-10 drop-shadow-xl/20">
       <div className="grid grid-cols-2 w-full bg-trimary-bg shadow-2xl h-12">
         <span className="col-span-1 flex">
-          <button className="bg-secondary-bg">blue</button>
+          <button className="">blue</button>
         </span>
         <span className="col-span-1 justify-self-end flex">
           <NavMenu />

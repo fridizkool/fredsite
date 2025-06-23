@@ -70,7 +70,7 @@ button:focus-visible {
 .window-blurb {
   background-color: var(--color-secondary-bg);
   border-radius: 20px;
-  border: 1px solid transparent;
+  border: 8px dashed var(--color-trimary-bg);
   padding: 10px;
   opacity: 90%;
   @apply drop-shadow-xl/60;
