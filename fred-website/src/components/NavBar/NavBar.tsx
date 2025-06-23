@@ -28,7 +28,7 @@ export default function NavBar() {
   }
 
   return (
-    <>
+    <div className="sticky top-0 w-full z-10 drop-shadow-xl/20">
       <div className="grid grid-cols-2 w-full bg-trimary-bg shadow-2xl h-12">
         <span className="col-span-1 flex">
           <button className="bg-secondary-bg">blue</button>
@@ -46,7 +46,7 @@ export default function NavBar() {
           </div>
         </div>
       )}
-    </>
+    </div>
   );
 }
 
