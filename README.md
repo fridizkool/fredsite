@@ -27,3 +27,5 @@ Better routing
 Play with web graphics libraries
 
 Translate to french
+
+Better actions and deployment
