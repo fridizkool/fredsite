@@ -3,8 +3,8 @@ import About from "../Pages/About/About";
 import MainPage from "../Pages/MainPage/MainPage";
 
 export const SiteRoutes: siteRouteType[] = [
-  { to: "./", component: <MainPage />, linkText: "Home" },
-  { to: "./about", component: <About />, linkText: "About me" },
+  { to: "/fredsite/", component: <MainPage />, linkText: "Home" },
+  { to: "/fredsite/about", component: <About />, linkText: "About me" },
 ];
 
 type siteRouteType = {
