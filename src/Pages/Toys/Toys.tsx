@@ -1,3 +1,9 @@
+import CanvasToy from "./CanvasToy";
+
 export default function Toys() {
-  return <> </>;
+  return (
+    <>
+      <CanvasToy />
+    </>
+  );
 }
