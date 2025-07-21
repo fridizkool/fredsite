@@ -48,7 +48,14 @@ export default function About() {
                 href="https://github.com/fridizkool/Project-2-SkSt"
                 target="_blank"
               >
-                Example
+                Tax Prep
+              </a>
+              {" - "}
+              <a
+                href="https://github.com/orgs/My-Budget-Buddy/repositories"
+                target="_blank"
+              >
+                Budgeting App
               </a>
             </div>
             <div className="window-blurb">
