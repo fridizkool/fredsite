@@ -2,7 +2,10 @@ export default function About() {
   return (
     <>
       <div className="introduction grid grid-cols-24 gap-5">
-        <div className="grid grid-rows-subgrid col-span-11 row-span-20">
+        <div
+          className="grid grid-rows-subgrid col-span-11 row-span-20"
+          id="About me"
+        >
           <div className="">
             <h1>About me</h1>
             <hr />
@@ -101,6 +104,7 @@ export default function About() {
         <img
           src="my picture.jpg"
           className="object-fill col-span-12 row-start-2 row-span-6 col-start-13 window-blurb"
+          id="My pic"
         />
       </div>
     </>

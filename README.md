@@ -29,3 +29,5 @@ Better routing
 Translate to french
 
 Better actions and deployment
+
+Bonzai conga interactive, talks to you when hovering over items
