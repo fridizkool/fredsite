@@ -20,11 +20,11 @@ Portfolio
 
 Widgets
 
-Toys
+**_Toys_**
 
 Better routing
 
-Play with web graphics libraries
+**_Play with web graphics libraries_**
 
 Translate to french
 

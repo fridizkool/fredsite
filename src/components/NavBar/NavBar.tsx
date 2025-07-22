@@ -2,6 +2,7 @@ import { useState, type ReactNode } from "react";
 import { MenuIcon } from "../Icons/MenuIcon";
 import { NavLink } from "react-router";
 import { SiteRoutes } from "../../routes/SiteRoutes";
+import Bonzai from "../Widgets/Bonzai";
 
 export default function NavBar() {
   const [open, setOpen] = useState(false);
@@ -31,6 +32,10 @@ export default function NavBar() {
             {SiteRoutes.map((route) => {
               return <MenuLink to={route.to}>{route.linkText}</MenuLink>;
             })}
+            <div className="px-2.5 py-2 inset-y-0 right-0 row-span-1">
+              <hr />
+              <Bonzai />
+            </div>
           </div>
         </div>
       )}
@@ -41,7 +46,7 @@ export default function NavBar() {
 export function MenuLink(props: MenuNavProps) {
   return (
     <div className="px-2.5 py-2 inset-y-0 right-0 row-span-1">
-      <NavLink to={props.to} className="text-white">
+      <NavLink to={props.to} key={props.to} className="text-white">
         {props?.children}
       </NavLink>
     </div>
