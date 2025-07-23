@@ -33,7 +33,11 @@ export default function NavBar() {
         <div className="grid grid-cols-8 w-full absolute z-10">
           <div className="col-span-1 col-start-8 bg-secondary-bg">
             {SiteRoutes.map((route) => {
-              return <MenuLink to={route.to}>{route.linkText}</MenuLink>;
+              return (
+                <MenuLink to={route.to} onClick={() => setOpen(false)}>
+                  {route.linkText}
+                </MenuLink>
+              );
             })}
           </div>
         </div>
@@ -45,7 +49,12 @@ export default function NavBar() {
 export function MenuLink(props: MenuNavProps) {
   return (
     <div className="px-2.5 py-2 inset-y-0 right-0 row-span-1">
-      <NavLink to={props.to} key={props.to} className="text-white">
+      <NavLink
+        to={props.to}
+        key={props.to}
+        className="text-white"
+        onClick={props?.onClick}
+      >
         {props?.children}
       </NavLink>
     </div>
@@ -55,4 +64,5 @@ export function MenuLink(props: MenuNavProps) {
 type MenuNavProps = {
   to: string;
   children?: ReactNode;
+  onClick?: () => void;
 };

@@ -4,7 +4,7 @@ import { Bonzais } from "./BonzaiText";
 export default function Bonzai() {
   const [enable, setEnable] = useState(false);
   const [clicked, setClicked] = useState(false);
-  const [curText, setCurText] = useState("poop");
+  const [curText, setCurText] = useState("");
   const congalala = useRef<HTMLImageElement>(null);
 
   useEffect(() => {
