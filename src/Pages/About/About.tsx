@@ -105,6 +105,7 @@ export default function About() {
           src="my picture.jpg"
           className="object-fill col-span-12 row-start-2 row-span-6 col-start-13 window-blurb"
           id="My pic"
+          draggable={false}
         />
       </div>
     </>

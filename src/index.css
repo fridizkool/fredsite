@@ -94,4 +94,16 @@ button:focus-visible {
   --color-primary-bg: #422a24;
   --color-secondary-bg: #423924;
   --color-trimary-bg: #3c4224;
+  --animate-talk: talk 1s ease-in-out infinite;
+  @keyframes talk {
+    0%,
+    100% {
+      transform: scaleY(95%);
+      animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+    }
+    50% {
+      transform: scaleX(95%);
+      animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+    }
+  }
 }
