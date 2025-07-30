@@ -8,6 +8,8 @@ Make a good pallette
 
 Design a figma wireframe
 
+Make the website work on mobile
+
 ## Pages
 
 About me

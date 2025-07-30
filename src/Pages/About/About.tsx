@@ -2,18 +2,16 @@ export default function About() {
   return (
     <>
       <div className="introduction grid grid-cols-24 gap-5">
-        <div
-          className="grid grid-rows-subgrid col-span-11 row-span-20"
-          id="About me"
-        >
+        <div className="grid grid-rows-subgrid col-span-11 row-span-20">
           <div className="">
             <h1>About me</h1>
             <hr />
           </div>
-          <div className="window-blurb">
-            React front end developer for Deloitte's IRS contract. Graduated cum
-            laude from the University of Pittsburgh with a Bachelor of Sciences
-            in Computer Science. Interests are in web development, game
+          <div className="window-blurb" id="summary">
+            Front end, back end, and fullstack developer. Most recently a React
+            front end developer for Deloitte's IRS contract. Graduated cum laude
+            from the University of Pittsburgh with a Bachelor of Sciences in
+            Computer Science. Interests are in web development, game
             development, and software development. Open to all types of work
             within the scope of software and web development.
           </div>
@@ -22,7 +20,7 @@ export default function About() {
             <hr />
           </div>
           <div className="grid grid-cols-2 gap-3">
-            <div className="window-blurb">
+            <div className="window-blurb" id="deloitte">
               <h3>Deloitte</h3>
               <div>Frontend Developer</div>
               <div>June 2024 - August 2025</div>
@@ -38,7 +36,7 @@ export default function About() {
                 Website
               </a>
             </div>
-            <div className="window-blurb">
+            <div className="window-blurb" id="skillstorm">
               <h3>Skillstorm</h3>
               <div>Java Developer</div>
               <div>March 2024 - Current</div>
@@ -61,7 +59,7 @@ export default function About() {
                 Budgeting App
               </a>
             </div>
-            <div className="window-blurb">
+            <div className="window-blurb" id="caasi">
               <h3>CAASI</h3>
               <div>Frontend Developer</div>
               <div>September 2022 - December 2022</div>
@@ -88,7 +86,7 @@ export default function About() {
             <hr />
           </div>
           <div className="grid grid-cols-2 gap-3">
-            <div className="window-blurb">
+            <div className="window-blurb" id="pittsburgh">
               <h3>University of Pittsburgh</h3>
               <div>Bachelor's of Science in Computer Science</div>
               <div>Graduated Cum Laude</div>

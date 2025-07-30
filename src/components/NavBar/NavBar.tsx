@@ -1,5 +1,5 @@
 import { useState, type ReactNode } from "react";
-import { MenuIcon } from "../Icons/MenuIcon";
+import MenuIcon from "../Icons/MenuIcon";
 import { NavLink } from "react-router";
 import { SiteRoutes } from "../../routes/SiteRoutes";
 import Bonzai from "../Widgets/Bonzai/Bonzai";

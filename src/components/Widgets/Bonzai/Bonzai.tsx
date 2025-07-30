@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { Bonzais } from "./BonzaiText";
 import Draggable from "react-draggable";
+import QuestionIcon from "../../Icons/Question";
 
 export default function Bonzai() {
   const [enable, setEnable] = useState(false);
@@ -13,16 +14,22 @@ export default function Bonzai() {
     congalala.current = document.createElement("img");
   }, []);
 
+  useEffect(() => {
+    setCurText("");
+  }, [enable]);
+
   function search() {
     if (!draggableNode.current || !congalala.current) return;
     const coords = breakTransform(draggableNode.current.style.transform);
     const x = coords.x - 1 + draggableNode.current.offsetLeft; //accurate position
     const y = coords.y - 1 + draggableNode.current.offsetTop;
-    const ele = document.elementFromPoint(x, y);
-    if (!ele || !Bonzais[ele?.id]) {
-      return null;
+    let ele = document.elementFromPoint(x, y);
+    while (ele?.parentElement != null) {
+      //search parents for conga
+      if (ele && Bonzais[ele?.id]) return ele;
+      ele = ele.parentElement;
     }
-    return ele;
+    return null;
   }
 
   function dragSearch() {
@@ -33,7 +40,7 @@ export default function Bonzai() {
       setCurText("");
       return;
     }
-    congalala.current.className = "animate-talk";
+    congalala.current.className = "animate-wiggle";
   }
 
   function stopSearch() {
@@ -43,7 +50,13 @@ export default function Bonzai() {
       setCurText("");
       return;
     }
+    congalala.current.className = "animate-talk";
     setCurText(Bonzais[ele.id]);
+  }
+
+  function dragStart() {
+    if (!draggableNode.current || !congalala.current) return;
+    setCurText("");
   }
 
   function breakTransform(transform: string) {
@@ -61,8 +74,17 @@ export default function Bonzai() {
 
   return (
     <>
-      <a onClick={() => setEnable(!enable)} className="cursor-pointer">
-        Bonzai Conga
+      <a
+        onClick={() => setEnable(!enable)}
+        className="cursor-pointer"
+        tabIndex={0}
+        title="Open Bonzai Conga"
+      >
+        <QuestionIcon
+          className="stroke-white object-contain"
+          height="55px"
+          width="55px"
+        />
       </a>
       {enable && (
         <Draggable
@@ -73,16 +95,21 @@ export default function Bonzai() {
           onDrag={() => {
             dragSearch();
           }}
+          onStart={() => {
+            dragStart();
+          }}
         >
-          <div ref={draggableNode} className="draggable-box">
-            <img
-              ref={congalala}
-              src="congalala.png"
-              draggable="false"
-              width={window.innerWidth / 10}
-              height={window.innerHeight / 10}
-            />
-            <span>{curText}</span>
+          <div
+            ref={draggableNode}
+            className="draggable-box max-w-4/12 min-w-4/12"
+            title="Drag me over something you want to know more about. When I dance I have information."
+          >
+            <img ref={congalala} src="congalala.png" draggable="false" />
+            {curText !== "" && (
+              <div className="shadow-2xl border-2 border-trimary-bg bg-primary-bg text-white min-w-fit">
+                {curText}
+              </div>
+            )}
           </div>
         </Draggable>
       )}

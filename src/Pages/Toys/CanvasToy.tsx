@@ -15,6 +15,7 @@ export default function CanvasToy() {
     camera.position.z = 20;
     const renderer = new THREE.WebGLRenderer();
     if (canvas.current) canvas.current.appendChild(renderer.domElement);
+    renderer.domElement.id = "canvas toy";
 
     const geometry = new THREE.BoxGeometry(1, 1, 1);
     const material = new THREE.MeshBasicMaterial({ color: 0xff0000 });

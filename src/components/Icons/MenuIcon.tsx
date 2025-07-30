@@ -1,6 +1,6 @@
 import type { IconProps } from "../../types/IconProps";
 
-export function MenuIcon(props: IconProps) {
+export default function MenuIcon(props: IconProps) {
   return (
     <svg
       style={{ height: "inherit", width: "inherit" }}
